@@ -17,11 +17,16 @@ const FormContainer = (props: IFormContainer) => {
   const onClear = (): void => {
     props.deleteForm();
   };
+
+  // props variable not needed here, used as an example
+  // have used resetfields to clear the form
   return (
     <FormComponent {...props.formData} onFinish={onFinish} onClear={onClear} />
   );
 };
 
+// redux formreducer not needed in this case
+// just giving an example it can be used this way
 const mapStateToProps = ({ formData }: RootState) => ({
   formData: formData,
 });
